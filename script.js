@@ -10,13 +10,13 @@ const boxTemplate = ({
   standart_price,
   items = [],
 }) => `
-  <div class="box${index === 0 ? " box-selected" : ""}" id="${id}">
+  <div class="box${index === 1 ? " box-selected" : ""}" id="${id}">
     <!-- Header Section -->
     <div class="box-header">
       <!-- Radio Button -->
       <div class="radio-button">
         <input type="radio" name="radio-button" ${
-          index === 0 ? "checked" : ""
+          index === 1 ? "checked" : ""
         } />
       </div>
       <!-- Unit and Discount Information -->
@@ -42,7 +42,7 @@ const boxTemplate = ({
     </div>
     <!-- Expandable Container for Items -->
     <div class="box-container" style="display: ${
-      index === 0 ? "block" : "none"
+      index === 1 ? "block" : "none"
     };">
       <!-- Display items table if items exist, otherwise show a placeholder -->
       ${
@@ -128,14 +128,14 @@ const boxes = [
 ];
 
 // Store the ID of the currently selected box for state tracking
-let previousSelectedBoxId = boxes[0].id;
+let previousSelectedBoxId = boxes[1].id;
 
 // Get references to key DOM elements
 const totalPrice = document.querySelector(".total-price");
 const boxesContainer = document.querySelector("#boxes");
 
 // Set initial total price to the first box's discount price
-totalPrice.innerHTML = `$${boxes[0].discount_price.toFixed(2)} USD`;
+totalPrice.innerHTML = `$${boxes[1].discount_price.toFixed(2)} USD`;
 
 // Generate and insert HTML for all boxes into the container
 boxesContainer.innerHTML = boxes
