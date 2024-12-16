@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proveway</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="title-container">
+        <span class="title">YAY! It's BOGO</span>
+        <hr />
+      </header>
+      <section class="boxes" id="boxes"></section>
+      <!-- 
+        groups content related to "boxes." 
+        The "boxes" class styles the section, and the "id" allows JavaScript to target this element.
+      -->
+      <section class="total">
+        <!-- 
+         groups content related to the total cost.
+          The "total" class applies styling for layout and design.
+        -->
+        <div class="free-delivery">Free Delivery</div>
+        <div>Total : <span class="total-price">$ 18.00 USD</span></div>
+        <!-- 
+         shows the total pricea and highlights the amount for dynamic updates via JavaScript.
+        -->
+      </section>
+      <section>
+        <div class="add-to-cart">
+          <img src="./assets/plus.svg" alt="plus" />
+          <span>Add to Cart</span>
+        </div>
+        <div class="powered-by">@ Powered by Pumper</div>
+      </section>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
